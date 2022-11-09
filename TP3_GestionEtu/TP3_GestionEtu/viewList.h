@@ -16,6 +16,6 @@ class ViewList : public Observer
 		void update() override;
 
 	private slots:
-		void remove();
+		void remove(); 
 };
 
