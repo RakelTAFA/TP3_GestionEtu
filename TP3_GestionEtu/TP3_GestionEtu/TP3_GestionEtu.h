@@ -13,7 +13,7 @@ class TP3_GestionEtu : public QMainWindow
 
 public:
     TP3_GestionEtu(QWidget *parent = nullptr);
-    ~TP3_GestionEtu() {}
+    ~TP3_GestionEtu() { ; }
 private:
     Ui::TP3_GestionEtuClass ui;
 
@@ -21,4 +21,7 @@ private:
     ViewForms* listForm;
     ViewPieChart* pieChartView;
     ViewHistogram* histogramView;
+
+private slots:
+    void deleteList();
 };
