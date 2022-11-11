@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
     // Create Interface
     TP3_GestionEtu w;
     w.setViewList(viewList);
+
+    w.displayListWidget();
     
     
     

@@ -1,9 +1,8 @@
 #include "TP3_GestionEtu.h"
 
-TP3_GestionEtu::TP3_GestionEtu(ViewList* viewList, QWidget *parent)
+TP3_GestionEtu::TP3_GestionEtu(QWidget *parent)
     : QMainWindow(parent)
 {
-    listView = viewList;
     
     ui.setupUi(this);
 
@@ -21,14 +20,25 @@ void TP3_GestionEtu::setViewList(ViewList* VL) {
 
 void TP3_GestionEtu::displayListWidget() {
     if (listView != nullptr) {
+        string num;
+        QString listString;
+        QListWidget* list = ui.listWidget;
         int size = listView->getPromotion()->getStudentList().size();
+        
         for (int i = 0; i < size; i++) {
-            ui.listWidget.addItem(listView->getPromotion()->getStudentList());
+            num = to_string(listView->getPromotion()->getStudentList()[i]->getNumero());
+            listString = QString::fromStdString(num);
+            listString += " - " + listView->getPromotion()->getStudentList()[i]->getPrenom();
+            listString += " " + listView->getPromotion()->getStudentList()[i]->getNom();
+            listString += " (" + listView->getPromotion()->getStudentList()[i]->getDepartement() + ")";
+            list->addItem(listString);
         }
     }
 }
 
 
 void TP3_GestionEtu::deleteList() {
-    cout << "Pressed" << endl;
+    
+    
+    //listView->getPromotion()->notifyObservers();
 }

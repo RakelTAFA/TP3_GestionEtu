@@ -14,10 +14,11 @@ public:
 	~Promotion();
 
 	QVector<Student*> getStudentList() const { return studentList; }
+	Student* getStudent(int n) { if (n < studentList.size()) return studentList[n]; }
 
 	void addObserver(Observer*) override;
 	void removeObserver(Observer*) override;
-	void notifyObserver() const override;
+	void notifyObservers() const override;
 
 	void addStudent(Student*);
 	void deleteStudent(Student*);

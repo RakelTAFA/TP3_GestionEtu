@@ -17,7 +17,7 @@ public:
 
     void setViewList(ViewList*);
 
-
+    void displayListWidget();
 
     //Ui::TP3_GestionEtuClass getInterface() { return ui; }
 
@@ -29,8 +29,7 @@ private:
     ViewPieChart* pieChartView;
     ViewHistogram* histogramView;
 
-    UI::TP3_GestionEtu getUI() { return ui; }
-    void displayListWidget();
+    
 
 private slots:
     void deleteList();
