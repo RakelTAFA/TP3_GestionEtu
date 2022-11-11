@@ -1,6 +1,7 @@
 #pragma once
 #include "promotion.h"
-#include <QListWidget>
+#include "controller.h"
+#include<qlistwidget.h>
 
 /**
  * @brief Class to manage the QListWidget
@@ -9,13 +10,17 @@
 class ViewList : public Observer
 {
 	private:
-
+		Controller* controller;
 
 	public:
 		ViewList(Promotion*, QListWidget*);
-		void update() override;
 
+		void update() override;
+		void setController(Controller*);
+
+	/*
 	private slots:
 		void remove(); 
+	*/
 };
 
