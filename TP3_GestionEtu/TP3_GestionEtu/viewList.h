@@ -10,10 +10,13 @@
 class ViewList : public Observer
 {
 	private:
+		Promotion* promotion;
 		Controller* controller;
 
 	public:
-		ViewList(Promotion*, QListWidget*);
+		ViewList(Promotion*);
+
+		Promotion* getPromotion() { return promotion; }
 
 		void update() override;
 		void setController(Controller*);

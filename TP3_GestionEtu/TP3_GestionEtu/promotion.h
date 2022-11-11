@@ -13,6 +13,8 @@ public:
 	Promotion();
 	~Promotion();
 
+	QVector<Student*> getStudentList() const { return studentList; }
+
 	void addObserver(Observer*) override;
 	void removeObserver(Observer*) override;
 	void notifyObserver() const override;

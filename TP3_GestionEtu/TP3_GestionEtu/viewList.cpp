@@ -1,8 +1,17 @@
 #include "viewList.h"
 
 
-ViewList::ViewList(Promotion* promo, QListWidget* listWidget) {
-	
+ViewList::ViewList(Promotion* promo) {
+	promotion = promo;
+	controller = nullptr;
+}
+
+
+void ViewList::setController(Controller* ctrl) {
+	if (controller != nullptr) {
+		delete controller;
+	}
+	controller = ctrl;
 }
 
 

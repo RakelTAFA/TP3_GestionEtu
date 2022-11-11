@@ -12,16 +12,25 @@ Promotion::~Promotion() {
 	Q_FOREACH(Student* st, studentList) {
 		delete st;
 	}
+	Q_FOREACH(Observer* obs, observerList) {
+		delete obs;
+	}
 }
 
 
 void Promotion::addObserver(Observer* observer) {
-	return;
+	observerList.push_back(observer);
 }
 
 
 void Promotion::removeObserver(Observer* observer) {
-	return;
+	size_t size = observerList.size();
+	for (size_t i = 0; i < size; i++) {
+		if (observer == observerList[i]) {
+			observerList.remove(i);
+			return;
+		}
+	}
 }
 
 
@@ -36,8 +45,8 @@ void Promotion::addStudent(Student* student) {
 
 
 void Promotion::deleteStudent(Student* student) {
-	size_t taille = studentList.size();
-	for (size_t i = 0; i < taille; i++) {
+	size_t size = studentList.size();
+	for (size_t i = 0; i < size; i++) {
 		if (student == studentList[i]) {
 			studentList.remove(i);
 			return;
