@@ -7,6 +7,7 @@
  * @brief Class to manage the QListWidget
  * @author Adrien Peytavie
 */
+
 class ViewList : public Observer
 {
 	private:
@@ -27,4 +28,3 @@ class ViewList : public Observer
 		void remove(); 
 	*/
 };
-

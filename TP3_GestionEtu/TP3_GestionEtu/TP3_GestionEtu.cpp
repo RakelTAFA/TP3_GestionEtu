@@ -17,7 +17,7 @@ void TP3_GestionEtu::setViewList(ViewList* VL) {
     listView = VL;
 }
 
-
+/*
 void TP3_GestionEtu::displayListWidget() {
     if (listView != nullptr) {
         string num;
@@ -35,10 +35,11 @@ void TP3_GestionEtu::displayListWidget() {
         }
     }
 }
-
+*/
 
 void TP3_GestionEtu::deleteList() {
-    
-    
-    //listView->getPromotion()->notifyObservers();
+    cout << "Bouton supprimer de la liste appuye" << endl;
+    QVector<QListWidgetItem*> list = ui.listWidget->selectedItems();
+
+    listView->getPromotion()->notifyObservers();
 }

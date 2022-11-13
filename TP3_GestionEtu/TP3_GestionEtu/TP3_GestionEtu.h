@@ -19,7 +19,7 @@ public:
 
     void setViewList(ViewList*);
 
-    void displayListWidget();
+    //void displayListWidget();
 
     //Ui::TP3_GestionEtuClass getInterface() { return ui; }
 

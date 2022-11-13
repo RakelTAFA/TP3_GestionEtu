@@ -51,9 +51,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Sources Files</Filter>
     </ClCompile>
-    <ClCompile Include="student.cpp">
-      <Filter>Models</Filter>
-    </ClCompile>
     <ClCompile Include="promotion.cpp">
       <Filter>Models</Filter>
     </ClCompile>
@@ -71,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="controller.cpp">
       <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="student.cpp">
+      <Filter>Models</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
