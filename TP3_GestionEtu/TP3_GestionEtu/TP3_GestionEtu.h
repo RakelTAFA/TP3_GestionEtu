@@ -15,6 +15,8 @@ public:
     TP3_GestionEtu(QWidget* parent = nullptr);
     ~TP3_GestionEtu() { ; }
 
+    QListWidget* getWidgetList() { return ui.listWidget; }
+
     void setViewList(ViewList*);
 
     void displayListWidget();

@@ -1,7 +1,7 @@
 #pragma once
 #include "promotion.h"
 #include "controller.h"
-#include<qlistwidget.h>
+#include <QListWidget>
 
 /**
  * @brief Class to manage the QListWidget
@@ -12,9 +12,10 @@ class ViewList : public Observer
 	private:
 		Promotion* promotion;
 		Controller* controller;
+		QListWidget* listWidget;
 
 	public:
-		ViewList(Promotion*);
+		ViewList(Promotion*, QListWidget*);
 
 		Promotion* getPromotion() { return promotion; }
 

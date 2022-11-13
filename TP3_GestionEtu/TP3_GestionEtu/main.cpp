@@ -11,14 +11,13 @@ int main(int argc, char *argv[])
     Promotion* promo = new Promotion();
     promo->loadFileCSV(QDir::currentPath() + "/../data/PromoDUT.csv");
 
-    ViewList* viewList = new ViewList(promo);
-    
-    
-    
-    promo->addObserver(viewList);
     
     // Create Interface
     TP3_GestionEtu w;
+
+    ViewList* viewList = new ViewList(promo, w.getWidgetList());
+    promo->addObserver(viewList);
+
     w.setViewList(viewList);
 
     w.displayListWidget();

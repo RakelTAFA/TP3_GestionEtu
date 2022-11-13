@@ -35,7 +35,6 @@ void Promotion::removeObserver(Observer* observer) {
 
 
 void Promotion::notifyObservers() const {
-
 	for (auto it : observerList) {
 		it->update();
 	}
