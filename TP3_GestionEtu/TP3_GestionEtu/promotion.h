@@ -14,14 +14,14 @@ public:
 	~Promotion();
 
 	QVector<Student*> getStudentList() const { return studentList; }
-	Student* getStudent(int n) { if (n < studentList.size()) return studentList[n]; }
+	Student* getStudent(int n) const { if (n < studentList.size()) return studentList[n]; }
 
 	void addObserver(Observer*) override;
 	void removeObserver(Observer*) override;
 	void notifyObservers() const override;
 
 	void addStudent(Student*);
-	void deleteStudent(Student*);
+	void deleteStudent(int);
 	void loadFileCSV(const QString&);
 	void displayList();
 };

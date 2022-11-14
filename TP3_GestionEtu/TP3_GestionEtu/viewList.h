@@ -8,23 +8,18 @@
  * @author Adrien Peytavie
 */
 
-class ViewList : public Observer
+class ViewList : public Observer, public QObject
 {
 	private:
 		Promotion* promotion;
-		Controller* controller;
 		QListWidget* listWidget;
 
 	public:
 		ViewList(Promotion*, QListWidget*);
+		
+		void deleteList();
 
 		Promotion* getPromotion() { return promotion; }
 
 		void update() override;
-		void setController(Controller*);
-
-	/*
-	private slots:
-		void remove(); 
-	*/
 };

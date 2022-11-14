@@ -1,12 +1,14 @@
 #include "TP3_GestionEtu.h"
 
-TP3_GestionEtu::TP3_GestionEtu(QWidget *parent)
-    : QMainWindow(parent)
+TP3_GestionEtu::TP3_GestionEtu(Promotion* promo, QWidget *parent)
+    : promotion(promo), QMainWindow(parent), listForm(nullptr), pieChartView(nullptr), histogramView(nullptr)
 {
-    
     ui.setupUi(this);
-
-    connect(ui.pushButton_delete_list, &QPushButton::released, this, &TP3_GestionEtu::deleteList);
+    
+    listView = new ViewList(promo, ui.listWidget);
+    promo->addObserver(listView);
+    
+    connect(ui.pushButton_delete_list, &QPushButton::pressed, listView, &ViewList::deleteList);
 }
 
 
@@ -17,29 +19,10 @@ void TP3_GestionEtu::setViewList(ViewList* VL) {
     listView = VL;
 }
 
+
 /*
-void TP3_GestionEtu::displayListWidget() {
-    if (listView != nullptr) {
-        string num;
-        QString listString;
-        QListWidget* list = ui.listWidget;
-        int size = listView->getPromotion()->getStudentList().size();
-        
-        for (int i = 0; i < size; i++) {
-            num = to_string(listView->getPromotion()->getStudentList()[i]->getNumero());
-            listString = QString::fromStdString(num);
-            listString += " - " + listView->getPromotion()->getStudentList()[i]->getPrenom();
-            listString += " " + listView->getPromotion()->getStudentList()[i]->getNom();
-            listString += " (" + listView->getPromotion()->getStudentList()[i]->getDepartement() + ")";
-            list->addItem(listString);
-        }
-    }
+void TP3_GestionEtu::deleteList() {
+    QVector<QListWidgetItem*> list = ui.listWidget->selectedItems();
+    listView->deleteList();
 }
 */
-
-void TP3_GestionEtu::deleteList() {
-    cout << "Bouton supprimer de la liste appuye" << endl;
-    QVector<QListWidgetItem*> list = ui.listWidget->selectedItems();
-
-    listView->getPromotion()->notifyObservers();
-}

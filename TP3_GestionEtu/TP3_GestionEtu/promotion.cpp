@@ -46,14 +46,15 @@ void Promotion::addStudent(Student* student) {
 }
 
 
-void Promotion::deleteStudent(Student* student) {
-	size_t size = studentList.size();
-	for (size_t i = 0; i < size; i++) {
-		if (student == studentList[i]) {
-			studentList.remove(i);
-			return;
+void Promotion::deleteStudent(int num) {
+	size_t taille = studentList.size();
+	for (size_t i = 0; i < taille; i++) {
+		if (studentList[i]->getNumero() == num) {
+			studentList.removeAt(i);
+			taille--;
 		}
 	}
+	notifyObservers();
 }
 
 

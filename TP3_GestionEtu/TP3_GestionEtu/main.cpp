@@ -13,21 +13,14 @@ int main(int argc, char *argv[])
 
     
     // Create Interface
-    TP3_GestionEtu w;
-
-    ViewList* viewList = new ViewList(promo, w.getWidgetList());
-    promo->addObserver(viewList);
-
-    w.setViewList(viewList);
-
-    w.displayListWidget();
+    TP3_GestionEtu w(promo);
+    
     
     
     
     
     w.show();
 
-
-    delete promo;
+    //delete promo;
     return a.exec();
 }
