@@ -51,10 +51,11 @@ void Promotion::deleteStudent(int num) {
 	for (size_t i = 0; i < taille; i++) {
 		if (studentList[i]->getNumero() == num) {
 			studentList.removeAt(i);
-			taille--;
+			notifyObservers();
+			return;
 		}
 	}
-	notifyObservers();
+	
 }
 
 
