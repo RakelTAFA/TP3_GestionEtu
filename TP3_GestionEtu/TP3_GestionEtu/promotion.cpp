@@ -55,7 +55,6 @@ void Promotion::deleteStudent(int num) {
 			return;
 		}
 	}
-	
 }
 
 

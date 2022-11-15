@@ -13,7 +13,7 @@ class TP3_GestionEtu : public QMainWindow
 
 public:
     TP3_GestionEtu(Promotion*, QWidget* parent = nullptr);
-    ~TP3_GestionEtu() { ; }
+    ~TP3_GestionEtu();
 
     QListWidget* getWidgetList() { return ui.listWidget; }
 
@@ -27,4 +27,6 @@ private:
     ViewPieChart* pieChartView;
     ViewHistogram* histogramView;
     Promotion* promotion;
+
+    void constructDepartmentItem();
 };

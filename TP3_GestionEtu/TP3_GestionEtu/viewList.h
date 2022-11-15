@@ -16,10 +16,11 @@ class ViewList : public Observer, public QObject
 
 	public:
 		ViewList(Promotion*, QListWidget*);
+		~ViewList();
 		
 		void deleteList();
 
-		Promotion* getPromotion() { return promotion; }
+		//Promotion* getPromotion() { return promotion; }
 
 		void update() override;
 };

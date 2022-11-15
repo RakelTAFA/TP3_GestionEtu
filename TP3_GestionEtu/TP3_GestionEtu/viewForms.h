@@ -1,8 +1,18 @@
 #pragma once
+#include "Observer.h"
+#include "controller.h"
+#include<qvector.h>
 
-class ViewForms 
+class ViewForms : public Observer, public QObject
 {
-public:
-	ViewForms();
+	private:
+		QVector<QWidget*> listLineEdit;
+
+	public:
+		ViewForms();
+		~ViewForms() { ; }
+
+		void update() override;
+		void addForm();
 };
 
