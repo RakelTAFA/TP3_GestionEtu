@@ -29,4 +29,5 @@ private:
     Promotion* promotion;
 
     void constructDepartmentItem();
+    void constructBacItem();
 };

@@ -2,11 +2,17 @@
 #include<qstringlist>
 
 
-ViewForms::ViewForms() 
-{
+
+ViewForms::ViewForms(QLineEdit* numero, QLineEdit* prenom, QLineEdit* nom, QComboBox* bac, QComboBox* dpt) {
+
 }
 
 
-void ViewForm::addForm() {
-	QStringList list
+void ViewForms::addForm() {
+	QStringList list;
+}
+
+
+void ViewForms::update() {
+	return;
 }

@@ -2,6 +2,7 @@
 #include "Observer.h"
 #include "controller.h"
 #include<qvector.h>
+#include<qcombobox.h>
 
 class ViewForms : public Observer, public QObject
 {
@@ -9,7 +10,7 @@ class ViewForms : public Observer, public QObject
 		QVector<QWidget*> listLineEdit;
 
 	public:
-		ViewForms();
+		ViewForms(QLineEdit*, QLineEdit*, QLineEdit*, QComboBox*, QComboBox*);
 		~ViewForms() { ; }
 
 		void update() override;

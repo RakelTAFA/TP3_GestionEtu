@@ -1,5 +1,6 @@
 #pragma once
 #include "promotion.h"
+#pragma once
 #include "controller.h"
 #include <QListWidget>
 
@@ -16,7 +17,7 @@ class ViewList : public Observer, public QObject
 
 	public:
 		ViewList(Promotion*, QListWidget*);
-		~ViewList();
+		~ViewList() { ; }
 		
 		void deleteList();
 

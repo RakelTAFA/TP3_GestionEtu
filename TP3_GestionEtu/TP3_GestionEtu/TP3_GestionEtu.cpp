@@ -9,8 +9,9 @@ TP3_GestionEtu::TP3_GestionEtu(Promotion* promo, QWidget *parent)
     promo->addObserver(listView);
 
     constructDepartmentItem();
+    constructBacItem();
 
-    listForm = new ViewForms();
+    listForm = new ViewForms(ui.lineEdit_add_number, ui.lineEdit_add_firstname, ui.lineEdit_add_lastname, ui.lineEdit_add_BAC, ui.lineEdit_add_department);
     promo->addObserver(listForm);
     
     connect(ui.pushButton_delete_list, &QPushButton::pressed, listView, &ViewList::deleteList);
@@ -32,8 +33,19 @@ void TP3_GestionEtu::constructDepartmentItem()
         ui.lineEdit_add_department->addItem(item);
         item = "";
     }
+    item = "Autres";
+    ui.lineEdit_add_department->addItem(item);
 }
 
+
+void TP3_GestionEtu::constructBacItem() {
+    ui.lineEdit_add_BAC->addItem("S");
+    ui.lineEdit_add_BAC->addItem("ES");
+    ui.lineEdit_add_BAC->addItem("STI");
+    ui.lineEdit_add_BAC->addItem("STG");
+    ui.lineEdit_add_BAC->addItem("Etr");
+    ui.lineEdit_add_BAC->addItem("Autre");
+}
 
 
 TP3_GestionEtu::~TP3_GestionEtu() {
