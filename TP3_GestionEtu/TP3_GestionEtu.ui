@@ -310,7 +310,7 @@
             <property name="title">
              <string>Bacs d'origine</string>
             </property>
-            <widget class="QChartView" name="chartViewEdit">
+            <widget class="QChartView" name="barChartEdit">
              <property name="geometry">
               <rect>
                <x>10</x>

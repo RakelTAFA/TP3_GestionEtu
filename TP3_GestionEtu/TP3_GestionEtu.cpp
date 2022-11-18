@@ -14,7 +14,7 @@ TP3_GestionEtu::TP3_GestionEtu(Promotion* promotion, QWidget *parent) : QMainWin
     
     promotion->addObserver(listView);
 
-    this->histogramView = new ViewHistogram(promotion);
+    this->histogramView = new ViewHistogram(promotion, ui.barChartEdit, ui.pieChartEdit);
     promotion->addObserver(histogramView);
 
     connect(ui.pushButton_delete_list, &QPushButton::released, this->listView, &ViewList::buttonPush);
