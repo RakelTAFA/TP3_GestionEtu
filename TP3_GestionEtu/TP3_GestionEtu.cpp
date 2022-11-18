@@ -7,6 +7,7 @@ TP3_GestionEtu::TP3_GestionEtu(Promotion* promotion, QWidget *parent) : QMainWin
     for (int i = 1; i <= 95; i++) {
         ui.lineEdit_add_department->addItem(QString::number(i).rightJustified(2, '0'));
     }
+    ui.lineEdit_add_department->addItem("Autres");
 
     this->listView = new ViewList(ui.listWidget, promotion);
     this->listForm = new ViewForms(ui, promotion);
