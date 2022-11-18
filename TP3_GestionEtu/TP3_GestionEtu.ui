@@ -287,6 +287,16 @@
             <property name="title">
              <string>Départements d'origine</string>
             </property>
+            <widget class="QChartView" name="pieChartEdit">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>331</width>
+               <height>351</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </item>
           <item>
@@ -300,11 +310,11 @@
             <property name="title">
              <string>Bacs d'origine</string>
             </property>
-            <widget class="QGraphicsView" name="graphicsView">
+            <widget class="QChartView" name="chartViewEdit">
              <property name="geometry">
               <rect>
-               <x>5</x>
-               <y>21</y>
+               <x>10</x>
+               <y>20</y>
                <width>331</width>
                <height>351</height>
               </rect>
@@ -354,6 +364,13 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header>QtCharts</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="TP3_GestionEtu.qrc"/>
  </resources>

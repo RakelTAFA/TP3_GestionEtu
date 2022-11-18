@@ -2,9 +2,11 @@
 #include <QBarCategoryAxis>
 #include <QValueAxis>
 
-ViewHistogram::ViewHistogram(Promotion* p) 
+ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE, QChartView* pieViewE) 
 {
 	promotion = p;
+	chartView = chartViewE;
+	pieView = pieViewE;
 	update();
 }
 
@@ -81,6 +83,6 @@ void ViewHistogram::update() {
 	chart->legend()->setVisible(true);
 	chart->legend()->setAlignment(Qt::AlignBottom);
 
-	chartView = new QChartView(chart);
+	chartViewE = new QChartView(chart);
 }
 
