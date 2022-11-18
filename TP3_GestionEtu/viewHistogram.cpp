@@ -1,4 +1,6 @@
 #include "viewHistogram.h"
+#include <QBarCategoryAxis>
+#include <QValueAxis>
 
 ViewHistogram::ViewHistogram(Promotion* p) 
 {
@@ -58,5 +60,27 @@ void ViewHistogram::update() {
 	for (int i = 0; i < 7; i++) {
 		series->append(set[i]);
 	}
+
+	QChart* chart = new QChart();
+	chart->addSeries(series);
+	chart->setTitle("Bacs d'origines");
+	chart->setAnimationOptions(QChart::SeriesAnimations);
+
+	QStringList categories;
+	categories << "Autres" << "ES" << "Etr" << "L" << "S" << "STG" << "STI";
+	QBarCategoryAxis* axeX = new QBarCategoryAxis();
+	axeX->append(categories);
+	chart->addAxis(axeX, Qt::AlignBottom);
+	series->attachAxis(axeX);
+
+	QValueAxis* axeY = new QValueAxis();
+	axeY->setLabelFormat("%d");
+	chart->addAxis(axeY, Qt::AlignLeft);
+	series->attachAxis(axeY);
+
+	chart->legend()->setVisible(true);
+	chart->legend()->setAlignment(Qt::AlignBottom);
+
+	chartView = new QChartView(chart);
 }
 

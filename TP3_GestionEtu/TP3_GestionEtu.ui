@@ -300,6 +300,16 @@
             <property name="title">
              <string>Bacs d'origine</string>
             </property>
+            <widget class="QGraphicsView" name="graphicsView">
+             <property name="geometry">
+              <rect>
+               <x>5</x>
+               <y>21</y>
+               <width>331</width>
+               <height>351</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </item>
          </layout>

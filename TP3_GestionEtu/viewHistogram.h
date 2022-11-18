@@ -2,6 +2,7 @@
 #include "promotion.h"
 #include<QtCharts/qbarseries.h>
 #include<QtCharts/qbarset.h>
+#include <qchartview.h>
 
 class ViewHistogram : public QObject, public Observer
 {
@@ -9,7 +10,7 @@ class ViewHistogram : public QObject, public Observer
 
 private:
 	Promotion* promotion;
-
+	QChartView* chartView;
 
 public:
 	ViewHistogram(Promotion*);
