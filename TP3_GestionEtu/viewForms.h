@@ -8,7 +8,7 @@
 #include "ControllerAddStudent.h"
 
 
-class ViewForms : public QObject{
+class ViewForms : public QObject {
 	Q_OBJECT
 
 public slots:

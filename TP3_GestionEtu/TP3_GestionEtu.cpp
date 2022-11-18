@@ -11,7 +11,7 @@ TP3_GestionEtu::TP3_GestionEtu(Promotion* promotion, QWidget *parent) : QMainWin
 
     this->listView = new ViewList(ui.listWidget, promotion);
     this->listForm = new ViewForms(ui, promotion);
-
+    
     promotion->addObserver(listView);
 
     connect(ui.pushButton_delete_list, &QPushButton::released, this->listView, &ViewList::buttonPush);

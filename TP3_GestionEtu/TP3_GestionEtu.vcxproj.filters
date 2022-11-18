@@ -95,6 +95,9 @@
     <QtMoc Include="viewForms.h">
       <Filter>View</Filter>
     </QtMoc>
+    <QtMoc Include="viewHistogram.h">
+      <Filter>View</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="student.h">
@@ -107,9 +110,6 @@
       <Filter>Observer</Filter>
     </ClInclude>
     <ClInclude Include="viewPieChart.h">
-      <Filter>View</Filter>
-    </ClInclude>
-    <ClInclude Include="viewHistogram.h">
       <Filter>View</Filter>
     </ClInclude>
     <ClInclude Include="AbstractController.h">

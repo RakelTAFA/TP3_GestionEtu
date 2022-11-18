@@ -110,7 +110,7 @@
     <ClInclude Include="student.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="promotion.h" />
-    <ClInclude Include="viewHistogram.h" />
+    <QtMoc Include="viewHistogram.h" />
     <ClInclude Include="viewPieChart.h" />
     <QtMoc Include="viewForms.h" />
     <QtMoc Include="viewList.h" />

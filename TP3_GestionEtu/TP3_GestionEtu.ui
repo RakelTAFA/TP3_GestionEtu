@@ -152,12 +152,17 @@
           </item>
           <item>
            <property name="text">
-            <string>STI2D</string>
+            <string>Etr</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>STMG</string>
+            <string>STI</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>STG</string>
            </property>
           </item>
           <item>
@@ -168,6 +173,11 @@
           <item>
            <property name="text">
             <string>ES</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Autres</string>
            </property>
           </item>
          </widget>
