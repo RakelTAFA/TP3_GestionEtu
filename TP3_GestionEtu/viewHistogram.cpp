@@ -83,6 +83,6 @@ void ViewHistogram::update() {
 	chart->legend()->setVisible(true);
 	chart->legend()->setAlignment(Qt::AlignBottom);
 
-	chartViewE = new QChartView(chart);
+	chartView = new QChartView(chart);
 }
 
