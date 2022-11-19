@@ -93,7 +93,7 @@ void ViewHistogram::update() {
 	chart->legend()->setVisible(true);
 	chart->legend()->setAlignment(Qt::AlignBottom);
 
-	chartView = new QChartView(chart);
-	chartView->setRenderHint(QPainter::Antialiasing);
+	chartView->setChart(chart);
+	//chartView->setRenderHint(QPainter::Antialiasing);
 }
 
