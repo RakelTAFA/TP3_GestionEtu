@@ -59,7 +59,7 @@ Student* Promotion::find(QString id) {
 }
 
 void Promotion::add(Student* student) {
-	student_liste.append(student);
+	student_liste.push_back(student);
 	notifyObserver();
 }
 

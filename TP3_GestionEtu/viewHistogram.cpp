@@ -59,16 +59,6 @@ void ViewHistogram::update() {
 	*set[5] << nbSTG;
 	*set[6] << nbSTI;
 
-	/*
-	set[0]->append(nbAutres);
-	set[1]->append(nbES);
-	set[2]->append(nbEtr);
-	set[3]->append(nbL);
-	set[4]->append(nbS);
-	set[5]->append(nbSTG);
-	set[6]->append(nbSTI);
-	*/
-
 	for (int i = 0; i < 7; i++) {
 		series->append(set[i]);
 	}
@@ -82,8 +72,8 @@ void ViewHistogram::update() {
 	categories << "Autres" << "ES" << "Etr" << "L" << "S" << "STG" << "STI";
 	QBarCategoryAxis* axeX = new QBarCategoryAxis();
 	axeX->append(categories);
-	chart->addAxis(axeX, Qt::AlignBottom);
-	series->attachAxis(axeX);
+	//chart->addAxis(axeX, Qt::AlignBottom);
+	//series->attachAxis(axeX);
 
 	QValueAxis* axeY = new QValueAxis();
 	axeY->setLabelFormat("%d");
@@ -95,5 +85,27 @@ void ViewHistogram::update() {
 
 	chartView->setChart(chart);
 	//chartView->setRenderHint(QPainter::Antialiasing);
+
+	// Pie Chart
+
+	QVector<int> departement_count(97);
+
+	for (auto it : promotion->getstudent_liste()) {
+		if (it->getDepartement() == "Autres") {
+			departement_count[96]++;
+		}
+		else {
+			++departement_count[it->getDepartement().toInt()];
+		}
+	}
+
+	/*
+	QPieSeries* pieSeries = new QPieSeries();
+
+	for (int i = 1; i < 97; i++) {
+		pieSeries->append(to_string(departement_count[i]), departement_count[i]);
+	}
+	*/
+
 }
 
