@@ -19,7 +19,6 @@ void ViewForms::buttonPush() {
 
 	list.push_back(identifiant2->text());
 	controller.control(list);
-
 }
 
 

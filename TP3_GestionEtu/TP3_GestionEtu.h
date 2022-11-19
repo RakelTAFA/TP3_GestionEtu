@@ -15,6 +15,8 @@ class TP3_GestionEtu : public QMainWindow
 public:
     TP3_GestionEtu(Promotion*, QWidget *parent = nullptr);
     ~TP3_GestionEtu() {}
+
+    void updateCharts();
 private:
     Ui::TP3_GestionEtuClass ui;
 

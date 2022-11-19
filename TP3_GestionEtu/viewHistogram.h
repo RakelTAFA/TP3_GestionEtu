@@ -12,9 +12,13 @@ private:
 	Promotion* promotion;
 	QChartView* chartView;
 	QChartView* pieView;
+	
 
 public:
 	ViewHistogram(Promotion*, QChartView*, QChartView*);
 	void update();
+
+	QChartView* getChartView() { return chartView; }
+	QChartView* getPieView() { return pieView; }
 };
 

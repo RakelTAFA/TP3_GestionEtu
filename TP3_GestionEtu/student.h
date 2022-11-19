@@ -12,7 +12,7 @@ private:
 
 public:
     Student() { ; }
-    Student(const QString Id = QString(), QString ln = "", QString fn = "", QString b = "", QString dep = "");
+    Student(const QString Id = QString(), QString ln = "", QString fn = "", QString dep = "", QString b = "" );
 
     QString getId() const { return Id;}
     QString getLastname() const { return Lastname;}

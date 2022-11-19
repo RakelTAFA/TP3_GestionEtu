@@ -2,7 +2,7 @@
 #include <QBarCategoryAxis>
 #include <QValueAxis>
 
-ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE, QChartView* pieViewE) 
+ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE, QChartView* pieViewE)
 {
 	promotion = p;
 	chartView = chartViewE;
@@ -51,6 +51,15 @@ void ViewHistogram::update() {
 
 	QBarSeries* series = new QBarSeries();
 
+	*set[0] << nbAutres;
+	*set[1] << nbES;
+	*set[2] << nbEtr;
+	*set[3] << nbL;
+	*set[4] << nbS;
+	*set[5] << nbSTG;
+	*set[6] << nbSTI;
+
+	/*
 	set[0]->append(nbAutres);
 	set[1]->append(nbES);
 	set[2]->append(nbEtr);
@@ -58,6 +67,7 @@ void ViewHistogram::update() {
 	set[4]->append(nbS);
 	set[5]->append(nbSTG);
 	set[6]->append(nbSTI);
+	*/
 
 	for (int i = 0; i < 7; i++) {
 		series->append(set[i]);
@@ -84,5 +94,6 @@ void ViewHistogram::update() {
 	chart->legend()->setAlignment(Qt::AlignBottom);
 
 	chartView = new QChartView(chart);
+	chartView->setRenderHint(QPainter::Antialiasing);
 }
 
