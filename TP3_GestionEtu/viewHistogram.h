@@ -11,14 +11,10 @@ class ViewHistogram : public QObject, public Observer
 private:
 	Promotion* promotion;
 	QChartView* chartView;
-	QChartView* pieView;
 	
 
 public:
-	ViewHistogram(Promotion*, QChartView*, QChartView*);
+	ViewHistogram(Promotion*, QChartView*);
 	void update();
-
-	QChartView* getChartView() { return chartView; }
-	QChartView* getPieView() { return pieView; }
 };
 

@@ -1,12 +1,12 @@
 #include "viewHistogram.h"
 #include <QBarCategoryAxis>
 #include <QValueAxis>
+#include <qpieseries.h>
 
-ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE, QChartView* pieViewE)
+ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE)
 {
 	promotion = p;
 	chartView = chartViewE;
-	pieView = pieViewE;
 	update();
 }
 
@@ -84,28 +84,6 @@ void ViewHistogram::update() {
 	chart->legend()->setAlignment(Qt::AlignBottom);
 
 	chartView->setChart(chart);
-	//chartView->setRenderHint(QPainter::Antialiasing);
-
-	// Pie Chart
-
-	QVector<int> departement_count(97);
-
-	for (auto it : promotion->getstudent_liste()) {
-		if (it->getDepartement() == "Autres") {
-			departement_count[96]++;
-		}
-		else {
-			++departement_count[it->getDepartement().toInt()];
-		}
-	}
-
-	/*
-	QPieSeries* pieSeries = new QPieSeries();
-
-	for (int i = 1; i < 97; i++) {
-		pieSeries->append(to_string(departement_count[i]), departement_count[i]);
-	}
-	*/
 
 }
 
