@@ -3,6 +3,12 @@
 #include <QValueAxis>
 #include <qpieseries.h>
 
+/**
+ * @short	Constructor for ViewHistogramm. You must give the ui dedicated Widget as a second parameter  
+ * @param	Promotion*, QChartView*
+ * @date	November 2022 
+ */
+
 ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE)
 {
 	promotion = p;
@@ -10,6 +16,10 @@ ViewHistogram::ViewHistogram(Promotion* p, QChartView* chartViewE)
 	update();
 }
 
+/**
+ * @short	Method which herits from Observer. It updates the QChartView widget with the new Promotion values
+ * @date	November 2022
+ */
 
 void ViewHistogram::update() {
 

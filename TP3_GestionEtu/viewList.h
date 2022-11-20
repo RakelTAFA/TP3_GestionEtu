@@ -6,9 +6,10 @@
 #include <QObject>
 
 /**
- * @brief Class to manage the QListWidget
- * @author Adrien Peytavie
+ * @brief Class to manage the List View
+ * @author Rakel Tafa
 */
+
 class ViewList : public QObject, public Observer {
 	Q_OBJECT
 

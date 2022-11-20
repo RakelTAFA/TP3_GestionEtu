@@ -1,5 +1,11 @@
 #include "TP3_GestionEtu.h"
 
+/**
+ * @short	Constructor for TP3_GestionEtu. Here are created all the Views, then added to the ObserversList of Promotion. All the connect are done here.
+ * @param	Promotion*, QWdiget* default = nullptr
+ * @date    November 2022
+ */
+
 TP3_GestionEtu::TP3_GestionEtu(Promotion* promotion, QWidget *parent) : QMainWindow(parent)
 {
     ui.setupUi(this);

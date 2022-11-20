@@ -6,8 +6,9 @@
 
 /**
  * @brief Class to manage the PieChart View
- * @author Adrien Peytavie
+ * @author Rakel Tafa
 */
+
 class ViewPieChart  : public Observer
 {
 	Promotion* promotion;

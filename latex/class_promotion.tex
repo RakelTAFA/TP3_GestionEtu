@@ -1,0 +1,186 @@
+\hypertarget{class_promotion}{}\doxysection{Promotion Class Reference}
+\label{class_promotion}\index{Promotion@{Promotion}}
+
+
+Class which plays the role of Model in the MVC.  
+
+
+
+
+{\ttfamily \#include $<$promotion.\+h$>$}
+
+Inheritance diagram for Promotion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_promotion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}{Promotion}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{class_promotion}{Promotion}} which only creates the instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}{$\sim$\+Promotion}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{class_promotion}{Promotion}} which deletes all pointers stored into student\+\_\+liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_a0d8273e43dc11fef77c1743f68d799bc}{read\+List}} (QString filename)
+\begin{DoxyCompactList}\small\item\em reads the .csv file from the path passed in parameter, and complete the promotion\textquotesingle{}s student\+\_\+liste with all the students stored in the .csv file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_a866640e35c34d22f8ed3508c6990c158}{add}} (\mbox{\hyperlink{class_student}{Student}} $\ast$etu)
+\begin{DoxyCompactList}\small\item\em Herits from \mbox{\hyperlink{class_observable}{Observable}}. Adds a Student$\ast$ to student\+\_\+liste and notifies all Observers from Observers\+List contained in \mbox{\hyperlink{class_promotion}{Promotion}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_a87d2560b8432cf0230fa2a824a59044e}{display}} ()
+\begin{DoxyCompactList}\small\item\em Used for a terminal display before the graphical implementaion, in order to see if the read\+List function works correctly. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_student}{Student}} $\ast$ $>$ \mbox{\hyperlink{class_promotion_a2f0cb8c47cd5e9e3d6f462e8be9a40ba}{getstudent\+\_\+liste}} ()
+\begin{DoxyCompactList}\small\item\em Getter for student\+\_\+liste. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_student}{Student}} $\ast$ \mbox{\hyperlink{class_promotion_a8b97a9bf94d6bc634ce75c0aa5b42d34}{find}} (QString)
+\begin{DoxyCompactList}\small\item\em Finds a \mbox{\hyperlink{class_student}{Student}} in student\+\_\+liste thanks to the ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_promotion_adc48ba25bcff3c3363639a5f035ba7d6}{remove}} (\mbox{\hyperlink{class_student}{Student}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Herits from \mbox{\hyperlink{class_observable}{Observable}}. Removes a Student$\ast$ from student\+\_\+liste and notifies all Observers from Observers\+List contained in \mbox{\hyperlink{class_promotion}{Promotion}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which plays the role of Model in the MVC. 
+
+\begin{DoxyAuthor}{Author}
+Rakel Tafa 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}\label{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}} 
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{Promotion()}{Promotion()}}
+{\footnotesize\ttfamily Promotion\+::\+Promotion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{class_promotion}{Promotion}} which only creates the instance. 
+
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+\mbox{\Hypertarget{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}\label{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}} 
+\index{Promotion@{Promotion}!````~Promotion@{$\sim$Promotion}}
+\index{````~Promotion@{$\sim$Promotion}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{$\sim$Promotion()}{~Promotion()}}
+{\footnotesize\ttfamily Promotion\+::$\sim$\+Promotion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{class_promotion}{Promotion}} which deletes all pointers stored into student\+\_\+liste. 
+
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_promotion_a866640e35c34d22f8ed3508c6990c158}\label{class_promotion_a866640e35c34d22f8ed3508c6990c158}} 
+\index{Promotion@{Promotion}!add@{add}}
+\index{add@{add}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Promotion\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} $\ast$}]{student }\end{DoxyParamCaption})}
+
+
+
+Herits from \mbox{\hyperlink{class_observable}{Observable}}. Adds a Student$\ast$ to student\+\_\+liste and notifies all Observers from Observers\+List contained in \mbox{\hyperlink{class_promotion}{Promotion}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Student$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+\mbox{\Hypertarget{class_promotion_a87d2560b8432cf0230fa2a824a59044e}\label{class_promotion_a87d2560b8432cf0230fa2a824a59044e}} 
+\index{Promotion@{Promotion}!display@{display}}
+\index{display@{display}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Promotion\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used for a terminal display before the graphical implementaion, in order to see if the read\+List function works correctly. 
+
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+\mbox{\Hypertarget{class_promotion_a8b97a9bf94d6bc634ce75c0aa5b42d34}\label{class_promotion_a8b97a9bf94d6bc634ce75c0aa5b42d34}} 
+\index{Promotion@{Promotion}!find@{find}}
+\index{find@{find}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_student}{Student}} $\ast$ Promotion\+::find (\begin{DoxyParamCaption}\item[{QString}]{id }\end{DoxyParamCaption})}
+
+
+
+Finds a \mbox{\hyperlink{class_student}{Student}} in student\+\_\+liste thanks to the ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em QString} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Student$\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+\mbox{\Hypertarget{class_promotion_a2f0cb8c47cd5e9e3d6f462e8be9a40ba}\label{class_promotion_a2f0cb8c47cd5e9e3d6f462e8be9a40ba}} 
+\index{Promotion@{Promotion}!getstudent\_liste@{getstudent\_liste}}
+\index{getstudent\_liste@{getstudent\_liste}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{getstudent\_liste()}{getstudent\_liste()}}
+{\footnotesize\ttfamily QVector$<$ \mbox{\hyperlink{class_student}{Student}} $\ast$ $>$ Promotion\+::getstudent\+\_\+liste (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for student\+\_\+liste. 
+
+\begin{DoxyReturn}{Returns}
+QVector$<$\+Student$\ast$$>$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+\mbox{\Hypertarget{class_promotion_a0d8273e43dc11fef77c1743f68d799bc}\label{class_promotion_a0d8273e43dc11fef77c1743f68d799bc}} 
+\index{Promotion@{Promotion}!readList@{readList}}
+\index{readList@{readList}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{readList()}{readList()}}
+{\footnotesize\ttfamily void Promotion\+::read\+List (\begin{DoxyParamCaption}\item[{QString}]{url }\end{DoxyParamCaption})}
+
+
+
+reads the .csv file from the path passed in parameter, and complete the promotion\textquotesingle{}s student\+\_\+liste with all the students stored in the .csv file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em QString} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+\mbox{\Hypertarget{class_promotion_adc48ba25bcff3c3363639a5f035ba7d6}\label{class_promotion_adc48ba25bcff3c3363639a5f035ba7d6}} 
+\index{Promotion@{Promotion}!remove@{remove}}
+\index{remove@{remove}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Promotion\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} $\ast$}]{student }\end{DoxyParamCaption})}
+
+
+
+Herits from \mbox{\hyperlink{class_observable}{Observable}}. Removes a Student$\ast$ from student\+\_\+liste and notifies all Observers from Observers\+List contained in \mbox{\hyperlink{class_promotion}{Promotion}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Student$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+November 2022 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/rakel/\+One\+Drive/\+Documents/\+RAKEL/\+COURS\+\_\+2eme\+\_\+annee/\+CPP/\+TP3\+\_\+\+Gestion\+Etu/\+TP3\+\_\+\+Gestion\+Etu/promotion.\+h\item 
+C\+:/\+Users/rakel/\+One\+Drive/\+Documents/\+RAKEL/\+COURS\+\_\+2eme\+\_\+annee/\+CPP/\+TP3\+\_\+\+Gestion\+Etu/\+TP3\+\_\+\+Gestion\+Etu/promotion.\+cpp\end{DoxyCompactItemize}

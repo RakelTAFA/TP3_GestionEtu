@@ -1,0 +1,28 @@
+\hypertarget{view_list_8h_source}{}\doxysection{view\+List.\+h}
+\label{view_list_8h_source}\index{C:/Users/rakel/OneDrive/Documents/RAKEL/COURS\_2eme\_annee/CPP/TP3\_GestionEtu/TP3\_GestionEtu/viewList.h@{C:/Users/rakel/OneDrive/Documents/RAKEL/COURS\_2eme\_annee/CPP/TP3\_GestionEtu/TP3\_GestionEtu/viewList.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}promotion.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}ControllerRemoveList.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QListWidget>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_view_list}{ViewList}} : \textcolor{keyword}{public} QObject, \textcolor{keyword}{public} \mbox{\hyperlink{class_observer}{Observer}} \{}
+\DoxyCodeLine{14     Q\_OBJECT}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_list_a0b07e4c9c45c65f5d7a015d6b0f4a818}{buttonPush}}();}
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19     QListWidget* listWidget;}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_promotion}{Promotion}}* promotion;}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_controller_remove_list}{ControllerRemoveList}} controller;}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_view_list}{ViewList}}(QListWidget* = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_promotion}{Promotion}}* = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_list_a64a66e410e17c128d236e82ec79ae4f4}{update}}();}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+
+\end{DoxyCode}

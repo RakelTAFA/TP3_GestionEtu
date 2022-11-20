@@ -1,0 +1,34 @@
+\hypertarget{view_forms_8h_source}{}\doxysection{view\+Forms.\+h}
+\label{view_forms_8h_source}\index{C:/Users/rakel/OneDrive/Documents/RAKEL/COURS\_2eme\_annee/CPP/TP3\_GestionEtu/TP3\_GestionEtu/viewForms.h@{C:/Users/rakel/OneDrive/Documents/RAKEL/COURS\_2eme\_annee/CPP/TP3\_GestionEtu/TP3\_GestionEtu/viewForms.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}promotion.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}ControllerRemoveNumber.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QLineEdit>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QComboBox>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QObject>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}ui\_TP3\_GestionEtu.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}ControllerAddStudent.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_view_forms}{ViewForms}} : \textcolor{keyword}{public} QObject \{}
+\DoxyCodeLine{16     Q\_OBJECT}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_forms_a356e8cac7f610210cc223fdd727aec50}{buttonPush}}();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_forms_a43cc627d55c79a82c79c3363a86758af}{buttonPush2}}();}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_view_forms}{ViewForms}}(Ui::TP3\_GestionEtuClass\& ui, \mbox{\hyperlink{class_promotion}{Promotion}}* promotion);}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     QLineEdit* identifiant;}
+\DoxyCodeLine{25     QLineEdit* firstname;}
+\DoxyCodeLine{26     QLineEdit* lastname;}
+\DoxyCodeLine{27     QComboBox* bac;}
+\DoxyCodeLine{28     QComboBox* departement;}
+\DoxyCodeLine{29     QLineEdit* identifiant2;}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_controller_remove_number}{ControllerRemoveNumber}} controller;}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_controller_add_student}{ControllerAddStudent}} controller2;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+
+\end{DoxyCode}

@@ -7,6 +7,10 @@
 #include "ui_TP3_GestionEtu.h"
 #include "ControllerAddStudent.h"
 
+/**
+ * @brief Class to handle the form
+ * @author Rakel Tafa
+*/
 
 class ViewForms : public QObject {
 	Q_OBJECT

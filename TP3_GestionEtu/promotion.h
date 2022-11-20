@@ -3,6 +3,10 @@
 #include "observer.h"
 #include <QVector>
 
+/**
+ * @brief Class which plays the role of Model in the MVC
+ * @author Rakel Tafa
+*/
 
 class Promotion : public Observable
 {

@@ -4,6 +4,11 @@
 #include<QtCharts/qbarset.h>
 #include <qchartview.h>
 
+/**
+ * @brief Class to manage the barChart View
+ * @author Rakel Tafa
+*/
+
 class ViewHistogram : public QObject, public Observer
 {
 	Q_OBJECT

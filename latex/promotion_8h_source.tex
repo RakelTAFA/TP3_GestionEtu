@@ -1,0 +1,27 @@
+\hypertarget{promotion_8h_source}{}\doxysection{promotion.\+h}
+\label{promotion_8h_source}\index{C:/Users/rakel/OneDrive/Documents/RAKEL/COURS\_2eme\_annee/CPP/TP3\_GestionEtu/TP3\_GestionEtu/promotion.h@{C:/Users/rakel/OneDrive/Documents/RAKEL/COURS\_2eme\_annee/CPP/TP3\_GestionEtu/TP3\_GestionEtu/promotion.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}student.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QVector>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_promotion}{Promotion}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_observable}{Observable}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     QVector<Student*> student\_liste;}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_promotion_aa10833a0510fd7fdf3a8b7019ae61531}{Promotion}}();}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_promotion_a2bcd3a9d3ead85b89dc2509b2afe332b}{\string~Promotion}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_promotion_a0d8273e43dc11fef77c1743f68d799bc}{readList}}( QString filename);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_promotion_a866640e35c34d22f8ed3508c6990c158}{add}}(\mbox{\hyperlink{class_student}{Student}}* etu);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_promotion_a87d2560b8432cf0230fa2a824a59044e}{display}}();}
+\DoxyCodeLine{21     QVector<Student*> \mbox{\hyperlink{class_promotion_a2f0cb8c47cd5e9e3d6f462e8be9a40ba}{getstudent\_liste}}();}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_student}{Student}}* \mbox{\hyperlink{class_promotion_a8b97a9bf94d6bc634ce75c0aa5b42d34}{find}}(QString);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_promotion_adc48ba25bcff3c3363639a5f035ba7d6}{remove}}(\mbox{\hyperlink{class_student}{Student}}*);}
+\DoxyCodeLine{24     \textcolor{comment}{//void creaList();}}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+
+\end{DoxyCode}

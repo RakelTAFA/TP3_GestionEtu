@@ -8,6 +8,11 @@
 #include "viewHistogram.h"
 #include "promotion.h"
 
+/**
+ * @brief Class to construct all the GUI
+ * @author Rakel Tafa
+*/
+
 class TP3_GestionEtu : public QMainWindow
 {
     Q_OBJECT
@@ -16,7 +21,6 @@ public:
     TP3_GestionEtu(Promotion*, QWidget *parent = nullptr);
     ~TP3_GestionEtu() {}
 
-    void updateCharts();
 private:
     Ui::TP3_GestionEtuClass ui;
 

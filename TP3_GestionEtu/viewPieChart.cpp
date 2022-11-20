@@ -1,6 +1,11 @@
 #include "viewPieChart.h"
 #include <qpieseries.h>
 
+/**
+ * @short	Method which herits from Observer. Initializes the GUI with the correct PieChart in function of the Promotion's Student list
+ * @date	November 2022
+ */
+
 void ViewPieChart::update()
 {
 	QVector<int> departement_count(97);
